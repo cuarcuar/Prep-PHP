@@ -1,14 +1,16 @@
 <?php
 
-class User{
+class User
+{
     public $name;
     public $hobbies;
 }
 
-function countBestHobbies($usersArray){
+function countBestHobbies($usersArray)
+{
     $hobbiesArray = [];
-    foreach($usersArray as $user){
-        foreach($user->hobbies as $hobbie){
+    foreach ($usersArray as $user) {
+        foreach ($user->hobbies as $hobbie) {
             array_key_exists($hobbie, $hobbiesArray) ? $hobbiesArray[$hobbie] += 1 : $hobbiesArray[$hobbie] = 1;
         }
     }
